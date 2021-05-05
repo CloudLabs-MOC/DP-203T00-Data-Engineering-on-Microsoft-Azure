@@ -13,6 +13,7 @@ In this module, the student will be able to:
 - [Module 8 - Transform data with Azure Data Factory or Azure Synapse Pipelines](#module-8---transform-data-with-azure-data-factory-or-azure-synapse-pipelines)
   - [Lab details](#lab-details)
   - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
+  - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Lab 1: Code-free transformation at scale with Azure Synapse Pipelines](#lab-1-code-free-transformation-at-scale-with-azure-synapse-pipelines)
     - [Exercise 1: Create artifacts](#exercise-1-create-artifacts)
       - [Task 1: Create SQL table](#task-1-create-sql-table)
@@ -33,7 +34,7 @@ In this module, the student will be able to:
 
 ## Lab setup and pre-requisites
 
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
+> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
 
 **Complete the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/04/README.md)** for this module.
 
@@ -49,6 +50,26 @@ Note, the following modules share this same environment:
 - [Module 12](labs/12/README.md)
 - [Module 13](labs/13/README.md)
 - [Module 16](labs/16/README.md)
+
+## Exercise 0: Start the dedicated SQL pool
+
+This lab uses the dedicated SQL pool. As a first step, make sure it is not paused. If so, start it by following these instructions:
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. If the dedicated SQL pool is paused, hover over the name of the pool and select **Resume (2)**.
+
+    ![The resume button is highlighted on the dedicated SQL pool.](media/resume-dedicated-sql-pool.png "Resume")
+
+4. When prompted, select **Resume**. It will take a minute or two to resume the pool.
+
+    ![The resume button is highlighted.](media/resume-dedicated-sql-pool-confirm.png "Resume")
+
+> **Continue to the next exercise** while the dedicated SQL pool resumes.
 
 ## Lab 1: Code-free transformation at scale with Azure Synapse Pipelines
 
@@ -222,7 +243,7 @@ Complete the steps below to create the following two datasets: `asal400_ecommerc
     - **Table name**: Select `wwi.CampaignAnalytics` **(3)**.
     - **Import schema**: Select `From connection/store` **(4)**.
 
-    ![New dataset form is displayed with the described configuration.](media/new-dataset-usertopproductpurchases.png "New dataset")
+    ![New dataset form is displayed with the described configuration.](media/new-dataset-campaignanalytics.png "New dataset")
 
 14. Select **+** in the toolbar **(1)**, then select **Integration dataset (2)** to create a new dataset.
 
@@ -239,7 +260,7 @@ Complete the steps below to create the following two datasets: `asal400_ecommerc
     - **Table name**: Select `wwi.UserTopProductPurchases` **(3)**.
     - **Import schema**: Select `From connection/store` **(4)**.
 
-    ![The data set form is displayed with the described configuration.](media/new-dataset-campaignanalytics.png "Integration dataset")
+    ![The data set form is displayed with the described configuration.](media/new-dataset-usertopproductpurchases.png "Integration dataset")
 
 #### Task 4: Create campaign analytics dataset
 
@@ -279,7 +300,7 @@ Issues include invalid characters in the revenue currency data, and misaligned c
 
     - **Compression type**: Select `none`.
     - **Column delimiter**: Select `Comma (,)`.
-    - **Row delimiter**: Select `Auto detect (\r,\n, or \r\n)`.
+    - **Row delimiter**: Select `Default (\r,\n, or \r\n)`.
     - **Encoding**: Select `Default(UTF-8).
     - **Escape character**: Select `Backslash (\)`.
     - **Quote character**: Select `Double quote (")`.
@@ -399,6 +420,8 @@ Issues include invalid characters in the revenue currency data, and misaligned c
         | Revenue | `toDecimal(replace(concat(toString(RevenuePart1), toString(Revenue)), '\\', ''), 10, 2, '$###,###.##')` | Concatenate the `RevenuePart1` and `Revenue` fields, replace the invalid `\` character, then convert and format the data to a decimal type. |
         | RevenueTarget | `toDecimal(replace(concat(toString(RevenueTargetPart1), toString(RevenueTarget)), '\\', ''), 10, 2, '$###,###.##')` | Concatenate the `RevenueTargetPart1` and `RevenueTarget` fields, replace the invalid `\` character, then convert and format the data to a decimal type. |
 
+    > **Note**: To insert the second column, select **+ Add** above the Columns list, then select **Add column**.
+
     ![The derived column's settings are displayed as described.](media/data-flow-campaign-analysis-derived-column-settings.png "Derived column's settings")
 
 13. Select the **+** to the right of the `ConvertColumnTypesAndValues` step, then select the **Select** schema modifier from the context menu.
@@ -440,7 +463,7 @@ Issues include invalid characters in the revenue currency data, and misaligned c
 
     ![The completed data flow is displayed.](media/data-flow-campaign-analysis-complete.png "Completed data flow")
 
-19. Select **Publish all** to save your new data flow.
+19. Select **Publish all** then **Publish** to save your new data flow.
 
     ![Publish all is highlighted.](media/publish-all-1.png "Publish all")
 
@@ -462,11 +485,13 @@ In order to run the new data flow, you need to create a new pipeline and add a d
 
     ![Drag the data flow activity onto the pipeline canvas.](media/pipeline-campaign-analysis-drag-data-flow.png "Pipeline canvas")
 
-5. In the `Adding data flow` blade, select **Use existing data flow**, then select the `asal400_lab2_writecampaignanalyticstoasa` existing data flow you created in the previous task.
+5. In the `General` section, set the **Name** value to `asal400_lab2_writecampaignanalyticstoasa`.
 
     ![The adding data flow form is displayed with the described configuration.](media/pipeline-campaign-analysis-adding-data-flow.png "Adding data flow")
 
-6. Select **OK**.
+6. Select the **Settings** tab, then select `asal400_lab2_writecampaignanalyticstoasa` under **Data flow**.
+
+    ![The data flow is selected.](media/pipeline-campaign-analysis-data-flow-settings-tab.png "Settings")
 
 8. Select **Publish all** to save your new pipeline.
 
@@ -487,6 +512,8 @@ In order to run the new data flow, you need to create a new pipeline and add a d
     ![The Monitor hub menu item is selected.](media/monitor-hub.png "Monitor hub")
 
 4. Wait for the pipeline run to successfully complete. You may need to refresh the view.
+
+    > While this is running, read the rest of the lab instructions to familiarize yourself with the content.
 
     ![The pipeline run succeeded.](media/pipeline-campaign-analysis-run-complete.png "Pipeline runs")
 
@@ -926,7 +953,7 @@ Let's start by executing our new Mapping Data Flow. In order to run the new data
 
     ![The settings are configured as described.](media/data-flow-activity-settings1.png "Settings")
 
-8. Expand **PolyBase** and configure the following:
+8. Expand **Staging** and configure the following:
 
     - **Staging linked service**: Select the `asadatalakeSUFFIX` linked service.
     - **Staging storage folder**: Enter `staging/userprofiles`. The `userprofiles` folder will be automatically created for you during the first pipeline run.
@@ -960,6 +987,8 @@ You have decided to show Tailwind Traders how to manually trigger, monitor, then
     ![The Monitor hub menu item is selected.](media/monitor-hub.png "Monitor hub")
 
 4. Select **Pipeline runs (1)** and wait for the pipeline run to successfully complete **(2)**. You may need to refresh **(3)** the view.
+
+    > While this is running, read the rest of the lab instructions to familiarize yourself with the content.
 
     ![The pipeline run succeeded.](media/pipeline-user-profiles-run-complete.png "Pipeline runs")
 
