@@ -13,6 +13,7 @@ In this module, the student will be able to:
 - [Module 7 - Ingest and load data into the Data Warehouse](#module-7---ingest-and-load-data-into-the-data-warehouse)
   - [Lab details](#lab-details)
   - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
+  - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Import data with PolyBase and COPY using T-SQL](#exercise-1-import-data-with-polybase-and-copy-using-t-sql)
     - [Task 1: Create staging tables](#task-1-create-staging-tables)
     - [Task 2: Configure and run PolyBase load operation](#task-2-configure-and-run-polybase-load-operation)
@@ -23,10 +24,12 @@ In this module, the student will be able to:
   - [Exercise 2: Petabyte-scale ingestion with Azure Synapse Pipelines](#exercise-2-petabyte-scale-ingestion-with-azure-synapse-pipelines)
     - [Task 1: Configure workload management classification](#task-1-configure-workload-management-classification)
     - [Task 2: Create pipeline with copy activity](#task-2-create-pipeline-with-copy-activity)
+  - [Exercise 3: Cleanup](#exercise-3-cleanup)
+    - [Task 1: Pause the dedicated SQL pool](#task-1-pause-the-dedicated-sql-pool)
 
 ## Lab setup and pre-requisites
 
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
+> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
 
 **Complete the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/04/README.md)** for this module.
 
@@ -42,6 +45,26 @@ Note, the following modules share this same environment:
 - [Module 12](labs/12/README.md)
 - [Module 13](labs/13/README.md)
 - [Module 16](labs/16/README.md)
+
+## Exercise 0: Start the dedicated SQL pool
+
+This lab uses the dedicated SQL pool. As a first step, make sure it is not paused. If so, start it by following these instructions:
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. If the dedicated SQL pool is paused, hover over the name of the pool and select **Resume (2)**.
+
+    ![The resume button is highlighted on the dedicated SQL pool.](media/resume-dedicated-sql-pool.png "Resume")
+
+4. When prompted, select **Resume**. It will take a minute or two to resume the pool.
+
+    ![The resume button is highlighted.](media/resume-dedicated-sql-pool-confirm.png "Resume")
+
+> **Continue to the next exercise** while the dedicated SQL pool resumes.
 
 ## Exercise 1: Import data with PolyBase and COPY using T-SQL
 
@@ -214,13 +237,15 @@ PolyBase requires the following elements:
 
 4. Select **Run** from the toolbar menu to execute the SQL command.
 
-5. In the query window, replace the script with the following to load the data into the `wwi_staging.SalesHeap` table. **DO NOT RUN** this command. In the interest of time, we will skip this command since it takes around 6 minutes to execute:
+5. In the query window, replace the script with the following to load the data into the `wwi_staging.SalesHeap` table. This command takes approximately 10 minutes to execute:
 
     ```sql
     INSERT INTO [wwi_staging].[SaleHeap]
     SELECT *
     FROM [wwi_external].[Sales]
     ```
+
+    > While this is running, read the rest of the lab instructions to familiarize yourself with the content.
 
 ### Task 3: Configure and run the COPY statement
 
@@ -243,6 +268,8 @@ Now let's see how to perform the same load operation with the COPY statement.
     ```
 
 2. Select **Run** from the toolbar menu to execute the SQL command. It takes a few minutes to execute this command. **Take note** of how long it took to execute this query.
+
+    > While this is running, read the rest of the lab instructions to familiarize yourself with the content.
 
 3. In the query window, replace the script with the following to see how many rows were imported:
 
@@ -544,3 +571,23 @@ To run loads with appropriate compute resources, create loading users designated
 19. Select **Pipeline Runs (1)**. You can see the status **(2)** of your pipeline run here. Note that you may need to refresh the view **(3)**. Once the pipeline run is complete, you can query the `wwi_perf.Sale_Heap` table to view the imported data.
 
     ![The completed pipeline run is displayed.](media/pipeline-copy-sales-pipeline-run.png "Pipeline runs")
+
+## Exercise 3: Cleanup
+
+Complete these steps to free up resources you no longer need.
+
+### Task 1: Pause the dedicated SQL pool
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. Hover over the name of the dedicated SQL pool and select **Pause (2)**.
+
+    ![The pause button is highlighted on the dedicated SQL pool.](media/pause-dedicated-sql-pool.png "Pause")
+
+4. When prompted, select **Pause**.
+
+    ![The pause button is highlighted.](media/pause-dedicated-sql-pool-confirm.png "Pause")

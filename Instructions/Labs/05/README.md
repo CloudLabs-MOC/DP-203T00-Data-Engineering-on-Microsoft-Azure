@@ -14,8 +14,9 @@ In this module, the student will be able to:
 - [Module 5 - Explore, transform, and load data into the Data Warehouse using Apache Spark](#module-5---explore-transform-and-load-data-into-the-data-warehouse-using-apache-spark)
   - [Lab details](#lab-details)
   - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
+  - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Perform Data Exploration in Synapse Studio](#exercise-1-perform-data-exploration-in-synapse-studio)
-    - [Task 1: Exploring data using the Preview functionality of Synapse Studio](#task-1-exploring-data-using-the-preview-functionality-of-synapse-studio)
+    - [Task 1: Exploring data using the data previewer in Azure Synapse Studio](#task-1-exploring-data-using-the-data-previewer-in-azure-synapse-studio)
     - [Task 2: Using serverless SQL pools to explore files](#task-2-using-serverless-sql-pools-to-explore-files)
     - [Task 3: Exploring and fixing data with Synapse Spark](#task-3-exploring-and-fixing-data-with-synapse-spark)
   - [Exercise 2: Ingesting data with Spark notebooks in Azure Synapse Analytics](#exercise-2-ingesting-data-with-spark-notebooks-in-azure-synapse-analytics)
@@ -24,10 +25,12 @@ In this module, the student will be able to:
     - [Task 1: Query and transform JSON data with Apache Spark for Azure Synapse](#task-1-query-and-transform-json-data-with-apache-spark-for-azure-synapse)
   - [Exercise 4: Integrating SQL and Spark pools in Azure Synapse Analytics](#exercise-4-integrating-sql-and-spark-pools-in-azure-synapse-analytics)
     - [Task 1: Update notebook](#task-1-update-notebook)
+  - [Exercise 5: Cleanup](#exercise-5-cleanup)
+    - [Task 1: Pause the dedicated SQL pool](#task-1-pause-the-dedicated-sql-pool)
 
 ## Lab setup and pre-requisites
 
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
+> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
 
 **Complete the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/04/README.md)** for this module.
 
@@ -44,13 +47,33 @@ Note, the following modules share this same environment:
 - [Module 13](labs/13/README.md)
 - [Module 16](labs/16/README.md)
 
+## Exercise 0: Start the dedicated SQL pool
+
+This lab uses the dedicated SQL pool. As a first step, make sure it is not paused. If so, start it by following these instructions:
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. If the dedicated SQL pool is paused, hover over the name of the pool and select **Resume (2)**.
+
+    ![The resume button is highlighted on the dedicated SQL pool.](media/resume-dedicated-sql-pool.png "Resume")
+
+4. When prompted, select **Resume**. It will take a minute or two to resume the pool.
+
+    ![The resume button is highlighted.](media/resume-dedicated-sql-pool-confirm.png "Resume")
+
+> **Continue to the next exercise** while the dedicated SQL pool resumes.
+
 ## Exercise 1: Perform Data Exploration in Synapse Studio
 
 One of the first data engineering tasks typically performed during data ingestion is to explore the data that is to be imported. Data exploration allows engineers to understand better the contents of files being ingested. This process helps to identify any potential data quality issues that might hinder automated ingestion processes. Through exploration, we can gain insights into data types, data quality, and whether any processing needs to be performed on the files prior to importing the data into your data lake or using it for analytics workloads.
 
 The engineers at Tailspin Traders have run into issues ingesting some of their sales data into the data warehouse, and have requested assistance in understanding how Synapse Studio can be used to help them resolve these issues. As the first step of this process, you need to explore the data to understand what is causing the issues they've encountered, and then provide them with a solution.
 
-### Task 1: Exploring data using the Preview functionality of Synapse Studio
+### Task 1: Exploring data using the data previewer in Azure Synapse Studio
 
 Azure Synapse Studio provides numerous ways to explore data, from a simple preview interface to more complicated programmatic options using Synapse Spark notebooks. In this exercise, you will learn how to use these features to explore, identify, and fix problematic files. You will be exploring CSV files stored in the `wwi-02/sale-poc` folder of the data lake and learning about how to identify and fix issues.
 
@@ -248,6 +271,10 @@ In this task, you will use a Synapse Spark notebook to explore a few of the file
 
 2. Download the Jupyter notebook for this exercise from <https://solliancepublicdata.blob.core.windows.net/notebooks/Lab%202%20-%20Explore%20with%20Spark.ipynb>. This will download a file named `Lab 2 - Explore with Spark.ipynb`.
 
+    The link will open the contents of the file in a new browser window. Select **Save As** in the File menu. By default, the browser will attempt to save this as a text file. If you have the option, set `Save as type` to **All files (*.*)**. Make sure the file name ends with `.ipynb`.
+
+    ![Save As dialog.](media/file-save-as.png "Save As")
+
 3. On the Develop hub, select the Add New Resource (**+**) button and then select **Import**.
 
     ![On the Develop hub, the Add New Resource (+) button is highlighted and Import is highlighted in the menu.](media/develop-hub-add-new-resource-import.png "Develop hub import notebook")
@@ -255,6 +282,8 @@ In this task, you will use a Synapse Spark notebook to explore a few of the file
 4. Select the **Lab 2 - Explore with Spark** you downloaded in step 2 and select Open.
 
 5. Follow the instructions contained within the notebook to complete the remainder of this task. When you are done with the notebook, return to this guide and continue with the next section.
+
+6. Once you have completed the **Lab 2 - Explore with Spark** notebook, click on the stop session button on the far right hand side of the toolbar to release the Spark cluster for the next exercise.  
 
 Tailwind Traders has unstructured and semi-structured files from various data sources. Their data engineers want to use their Spark expertise to explore, ingest, and transform these files.
 
@@ -326,7 +355,7 @@ You recommend using the Data hub to view the Parquet files in the connected stor
 
     ![The configured chart is displayed.](media/2010-sale-parquet-chart.png "Chart view")
 
-11. Create a new cell underneath by selecting **{} Add code** when hovering over the blank space at the bottom of the notebook.
+11. Create a new cell underneath by selecting **+**, then **</> Code cell** underneath the chart.
 
     ![The Add code button is highlighted underneath the chart.](media/chart-add-code.png "Add code")
 
@@ -705,3 +734,23 @@ The Apache Spark pool to Synapse SQL connector is a data source implementation f
     > **Note**: Feel free to click on the column headers in the Table view to sort the result set.
 
     ![The cell contents and output are displayed.](media/join-output.png "Join output")
+
+## Exercise 5: Cleanup
+
+Complete these steps to free up resources you no longer need.
+
+### Task 1: Pause the dedicated SQL pool
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. Hover over the name of the dedicated SQL pool and select **Pause (2)**.
+
+    ![The pause button is highlighted on the dedicated SQL pool.](media/pause-dedicated-sql-pool.png "Pause")
+
+4. When prompted, select **Pause**.
+
+    ![The pause button is highlighted.](media/pause-dedicated-sql-pool-confirm.png "Pause")
