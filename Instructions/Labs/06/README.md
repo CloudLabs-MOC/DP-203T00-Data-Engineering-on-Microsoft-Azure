@@ -16,8 +16,6 @@ In this module the student will be able to:
 - [Module 6 - Data exploration and transformation in Azure Databricks](#module-6---data-exploration-and-transformation-in-azure-databricks)
   - [Lab details](#lab-details)
   - [Lab 1 - Working with DataFrames](#lab-1---working-with-dataframes)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-      - [Task 1 - Create and configure the Azure Databricks workspace](#task-1---create-and-configure-the-azure-databricks-workspace)
     - [Exercise 1: Complete the lab notebook](#exercise-1-complete-the-lab-notebook)
       - [Task 1: Clone the Databricks archive](#task-1-clone-the-databricks-archive)
       - [Task 2: Complete the Describe a DataFrame notebook](#task-2-complete-the-describe-a-dataframe-notebook)
@@ -34,16 +32,6 @@ In this module the student will be able to:
 ## Lab 1 - Working with DataFrames
 
 Your data processing in Azure Databricks is accomplished by defining DataFrames to read and process the Data. This lab will introduce how to read your data using Azure Databricks DataFrames. You need to complete the exercises within Databricks Notebooks. To begin, you need to have access to an Azure Databricks workspace. If you do not have a workspace available, follow the instructions below. Otherwise, you can skip ahead to the `Clone the Databricks archive` step.
-
-### Before the hands-on lab
-
-> **Note:** Only complete the `Before the hands-on lab` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
-
-Before stepping through the exercises in this lab, make sure you have access to an Azure Databricks workspace with an available cluster. Perform the tasks below to configure the workspace.
-
-#### Task 1 - Create and configure the Azure Databricks workspace
-
-Follow the [lab 06 setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/06/lab-01-setup.md) to create and configure the workspace.
 
 ### Exercise 1: Complete the lab notebook
 
@@ -177,4 +165,4 @@ Open the **3.Exercise-Deduplication-of-Data** notebook. Make sure you attach you
 
 The goal of this exercise is to put into practice some of what you have learned about using DataFrames, including renaming columns. The instructions are provided within the notebook, along with empty cells for you to do your work. At the bottom of the notebook are additional cells that will help verify that your work is accurate.
 
-> Note: You will find a corresponding notebook within the `Solutions` subfolder. This contains completed cells for the exercise. Refer to the notebook if you get stuck or simply want to see the solution.
+> Note: You will find a corresponding notebook within the **Solutions** subfolder. This contains completed cells for the exercise. Refer to the notebook if you get stuck or simply want to see the solution.
