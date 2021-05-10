@@ -17,9 +17,6 @@ In this module, the student will be able to:
   - [Concepts](#concepts)
   - [Event Hubs and Spark Structured Streaming](#event-hubs-and-spark-structured-streaming)
   - [Streaming concepts](#streaming-concepts)
-  - [Lab](#lab)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-      - [Task 1: Create and configure the Azure Databricks workspace](#task-1-create-and-configure-the-azure-databricks-workspace)
     - [Exercise 1: Complete the Structured Streaming Concepts notebook](#exercise-1-complete-the-structured-streaming-concepts-notebook)
       - [Task 1: Clone the Databricks archive](#task-1-clone-the-databricks-archive)
       - [Task 2: Complete the notebook](#task-2-complete-the-notebook)
@@ -46,20 +43,6 @@ A streaming system consists of:
 
 - Input sources such as Kafka, Azure Event Hubs, IoT Hub, files on a distributed system, or TCP-IP sockets
 - Stream processing using Structured Streaming, forEach sinks, memory sinks, etc.
-
-## Lab
-
-You need to complete the exercises within Databricks Notebooks. To begin, you need to have access to an Azure Databricks workspace. If you do not have a workspace available, follow the instructions below. Otherwise, you can skip ahead to the `Clone the Databricks archive` step.
-
-### Before the hands-on lab
-
-> **Note:** Only complete the `Before the hands-on lab` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
-
-Before stepping through the exercises in this lab, make sure you have access to an Azure Databricks workspace with an available cluster. Perform the tasks below to configure the workspace.
-
-#### Task 1: Create and configure the Azure Databricks workspace
-
-Follow the [lab 15 setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/15/lab-01-setup.md) to create and configure the workspace.
 
 ### Exercise 1: Complete the Structured Streaming Concepts notebook
 
