@@ -13,8 +13,6 @@ In this module, the student will be able to:
 - [Module 1 - Explore compute and storage options for data engineering workloads](#module-1---explore-compute-and-storage-options-for-data-engineering-workloads)
   - [Lab details](#lab-details)
   - [Lab 1 - Delta Lake architecture](#lab-1---delta-lake-architecture)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-      - [Task 1: Create and configure the Azure Databricks workspace](#task-1-create-and-configure-the-azure-databricks-workspace)
     - [Exercise 1: Complete the lab notebook](#exercise-1-complete-the-lab-notebook)
       - [Task 1: Clone the Databricks archive](#task-1-clone-the-databricks-archive)
       - [Task 2: Complete the following notebook](#task-2-complete-the-following-notebook)
@@ -30,16 +28,6 @@ In this module, the student will be able to:
 ## Lab 1 - Delta Lake architecture
 
 In this lab, you will use an Azure Databricks workspace and perform Structured Streaming with batch jobs by using Delta Lake. You need to complete the exercises within a Databricks Notebook. To begin, you need to have access to an Azure Databricks workspace. If you do not have a workspace available, follow the instructions below. Otherwise, you can skip to the bottom of the page to [Clone the Databricks archive](#clone-the-databricks-archive).
-
-### Before the hands-on lab
-
-> **Note:** Only complete the `Before the hands-on lab` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
-
-Before stepping through the exercises in this lab, make sure you have access to an Azure Databricks workspace with an available cluster. Perform the tasks below to configure the workspace.
-
-#### Task 1: Create and configure the Azure Databricks workspace
-
-**If you are not using a hosted lab environment**, follow the [lab 01 setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/01/lab-01-setup.md) to manually create and configure the workspace.
 
 ### Exercise 1: Complete the lab notebook
 
