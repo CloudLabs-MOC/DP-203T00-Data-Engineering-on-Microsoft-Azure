@@ -110,16 +110,10 @@ Also, Hyperspace allows users to compare their original plan versus the updated 
     hyperspace = Hyperspace(spark)
     ```
 
-    Replace the `REPLACE_WITH_YOUR_DATALAKE_NAME` value with the name of your primary ADLS Gen2 account for your Synapse workspace. To find this, do the following:
+    Replace the `REPLACE_WITH_YOUR_DATALAKE_NAME` value with the name of your primary ADLS Gen2 account for your Synapse workspace. 
 
-    1. Navigate to the **Data** hub.
-
-        ![The data hub is highlighted.](media/data-hub.png "Data hub")
-
-    2. Select the **Linked** tab **(1)**, expand the Azure Data Lake Storage Gen2 group, then make note of the primary ADLS Gen2 name **(2)** next to the name of the workspace.
-
-        ![The primary ADLS Gen2 name is displayed.](media/adlsgen2-name.png "ADLS Gen2 name")
-
+    > **Note**: You can find the Azure Data Lake Storage name from the **Environment Details** tab, you can locate the **Environment Details** tab on the upper right corner.
+  
 7. Run the new cell. It will load the two DataFrames with data from the data lake and initialize Hyperspace.
 
     ![Load data from the data lake and initialize Hyperspace](media/lab-02-ex-02-task-02-initialize-hyperspace.png "Initialize Hyperspace")
