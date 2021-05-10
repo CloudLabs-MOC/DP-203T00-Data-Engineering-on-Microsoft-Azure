@@ -8,10 +8,6 @@ After completing the lab, you will understand the main steps of an end-to-end Ma
 
 - [Module 17 - Perform integrated Machine Learning processes in Azure Synapse Analytics](#module-17---perform-integrated-machine-learning-processes-in-azure-synapse-analytics)
   - [Lab details](#lab-details)
-  - [Pre-requisites](#pre-requisites)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Create and configure the Azure Synapse Analytics workspace](#task-1-create-and-configure-the-azure-synapse-analytics-workspace)
-    - [Task 2: Create and configure additional resources for this lab](#task-2-create-and-configure-additional-resources-for-this-lab)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Create an Azure Machine Learning linked service](#exercise-1-create-an-azure-machine-learning-linked-service)
     - [Task 1: Create and configure an Azure Machine Learning linked service in Synapse Studio](#task-1-create-and-configure-an-azure-machine-learning-linked-service-in-synapse-studio)
@@ -28,28 +24,6 @@ After completing the lab, you will understand the main steps of an end-to-end Ma
   - [Exercise 5: Cleanup](#exercise-5-cleanup)
     - [Task 1: Pause the dedicated SQL pool](#task-1-pause-the-dedicated-sql-pool)
   - [Resources](#resources)
-
-## Pre-requisites
-
-Install [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494) on your lab computer or VM.
-
-## Before the hands-on lab
-
-> **Note:** Only complete the `Before the hands-on lab` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
-
-Before stepping through the exercises in this lab, make sure you have properly configured your Azure Synapse Analytics workspace. Perform the tasks below to configure the workspace.
-
-### Task 1: Create and configure the Azure Synapse Analytics workspace
-
->**NOTE**
->
->If you have already created and configured the Synapse Analytics workspace while running one of the other labs available in this repo, you must not perform this task again and you can move on to the next task. The labs are designed to share the Synapse Analytics workspace, so you only need to create it once.
-
-**If you are not using a hosted lab environment**, follow the instructions in [Deploy your Azure Synapse Analytics workspace](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/17/asa-workspace-deploy.md) to create and configure the workspace.
-
-### Task 2: Create and configure additional resources for this lab
-
-**If you are not using a hosted lab environment**, follow the instructions in [Deploy resources for Lab 01](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/17/lab-01-deploy.md) to deploy additional resources for this lab. Once deployment is complete, you are ready to proceed with the exercises in this lab.
 
 ## Exercise 0: Start the dedicated SQL pool
 
