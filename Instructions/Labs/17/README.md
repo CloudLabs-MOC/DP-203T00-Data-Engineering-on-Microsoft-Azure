@@ -439,7 +439,7 @@ In this exercise you will view the prediction results in a Power BI report. You 
 
 First, you will publish a simple Product Quantity Forecast report to Power BI.
 
-Download the `ProductQuantityForecast.pbix` file from the GitHub repo: https://github.com/solliancenet/azure-synapse-analytics-ga-content-packs/blob/main/hands-on-labs/lab-01/ProductQuantityForecast.pbix (select `Download` on the GitHub page).
+Download the `ProductQuantityForecast.pbix` file from the GitHub repo: https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/blob/main/Instructions/Labs/17/ProductQuantityForecast.pbix?raw=true (select `Download` on the GitHub page).
 
 Open the file with Power BI Desktop (ignore the warning about missing credentials). Also, if you are first prompted to update credentials, ignore the messages and close the pop-ups without updating the connection information.
 
