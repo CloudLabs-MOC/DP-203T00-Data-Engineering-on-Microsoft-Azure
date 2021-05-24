@@ -38,14 +38,6 @@ In this module, the student will be able to:
   - [Exercise 6: Cleanup](#exercise-6-cleanup)
     - [Task 1: Pause the dedicated SQL pool](#task-1-pause-the-dedicated-sql-pool)
 
-### Lab setup and pre-requisites
-
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
-
-1. If you have not already, follow the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/02/README.md) for this module.
-
-2. Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15) on your computer or lab virtual machine.
-
 ## Exercise 0: Start the dedicated SQL pool
 
 This lab uses the dedicated SQL pool. As a first step, make sure it is not paused. If so, start it by following these instructions:
