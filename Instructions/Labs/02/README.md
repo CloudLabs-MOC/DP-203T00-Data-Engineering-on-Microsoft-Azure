@@ -10,8 +10,6 @@ In this module, the student will be able to:
 ## Lab details
 
 - [Module 2 - Design and Implement the serving layer](#module-2---design-and-implement-the-serving-layer)
-  - [Lab details](#lab-details)
-    - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Implementing a Star Schema](#exercise-1-implementing-a-star-schema)
     - [Task 1: Create star schema in SQL database](#task-1-create-star-schema-in-sql-database)
