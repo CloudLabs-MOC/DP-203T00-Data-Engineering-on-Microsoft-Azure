@@ -13,8 +13,7 @@ In this module, the student will be able to:
 ## Lab details
 
 - [Module 4 - Run interactive queries using serverless SQL pools](#module-4---run-interactive-queries-using-serverless-sql-pools)
-  - [Lab details](#lab-details)
-  - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
+  
   - [Exercise 1: Querying a Data Lake Store using serverless SQL pools in Azure Synapse Analytics](#exercise-1-querying-a-data-lake-store-using-serverless-sql-pools-in-azure-synapse-analytics)
     - [Task 1: Query sales Parquet data with serverless SQL pools](#task-1-query-sales-parquet-data-with-serverless-sql-pools)
     - [Task 2: Create an external table for 2019 sales data](#task-2-create-an-external-table-for-2019-sales-data)
@@ -29,26 +28,12 @@ In this module, the student will be able to:
 
 Tailwind Trader's Data Engineers want a way to explore the data lake, transform and prepare data, and simplify their data transformation pipelines. In addition, they want their Data Analysts to explore data in the lake and Spark external tables created by Data Scientists or Data Engineers, using familiar T-SQL language or their favorite tools, which can connect to SQL endpoints.
 
-## Lab setup and pre-requisites
-
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 1.
-
-You must have permissions to create new Azure Active Directory security groups and assign members to them.
-
-**Complete the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/04/README.md)** for this module.
-
-Note, the following modules share this same environment:
-
-- [Module 4](labs/04/README.md)
-- [Module 5](labs/05/README.md)
-- [Module 7](labs/07/README.md)
-- [Module 8](labs/08/README.md)
-- [Module 9](labs/09/README.md)
-- [Module 10](labs/10/README.md)
-- [Module 11](labs/11/README.md)
-- [Module 12](labs/12/README.md)
-- [Module 13](labs/13/README.md)
-- [Module 16](labs/16/README.md)
+**Note**: the following modules share this same environment:
+- Module 4 - Run interactive queries using serverless SQL pools
+- Module 5 - Explore, transform, and load data into the Data Warehouse using Apache Spark
+- Module 12 - Support Hybrid Transactional Analytical Processing (HTAP) with Azure Synapse Link
+- Module 13 - End-to-end security with Azure Synapse Analytics
+- Module 16 - Build reports using Power BI integration with Azure Synapse Analytics
 
 ## Exercise 1: Querying a Data Lake Store using serverless SQL pools in Azure Synapse Analytics
 
