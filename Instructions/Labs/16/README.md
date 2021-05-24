@@ -12,9 +12,7 @@ In this module, the student will be able to:
 ## Lab details
 
 - [Module 16 - Build reports using Power BI integration with Azure Synapse Analytics](#module-16---build-reports-using-power-bi-integration-with-azure-synapse-analytics)
-  - [Lab details](#lab-details)
   - [Resource naming throughout this lab](#resource-naming-throughout-this-lab)
-  - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Power BI and Synapse workspace integration](#exercise-1-power-bi-and-synapse-workspace-integration)
     - [Task 1: Login to Power BI](#task-1-login-to-power-bi)
@@ -44,26 +42,12 @@ For the remainder of this guide, the following terms will be used for various AS
 | SQL Pool | `SqlPool01` |
 | Lab schema name | `pbi` |
 
-## Lab setup and pre-requisites
-
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
-
-Install [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494) on your lab computer or VM.
-
-**Complete the [lab setup instructions](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/blob/main/setup/04/README.md)** for this module.
-
-Note, the following modules share this same environment:
-
-- [Module 4](labs/04/README.md)
-- [Module 5](labs/05/README.md)
-- [Module 7](labs/07/README.md)
-- [Module 8](labs/08/README.md)
-- [Module 9](labs/09/README.md)
-- [Module 10](labs/10/README.md)
-- [Module 11](labs/11/README.md)
-- [Module 12](labs/12/README.md)
-- [Module 13](labs/13/README.md)
-- [Module 16](labs/16/README.md)
+**Note**: the following modules share this same environment:
+- Module 4 - Run interactive queries using serverless SQL pools
+- Module 5 - Explore, transform, and load data into the Data Warehouse using Apache Spark
+- Module 12 - Support Hybrid Transactional Analytical Processing (HTAP) with Azure Synapse Link
+- Module 13 - End-to-end security with Azure Synapse Analytics
+- Module 16 - Build reports using Power BI integration with Azure Synapse Analytics
 
 ## Exercise 0: Start the dedicated SQL pool
 
