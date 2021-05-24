@@ -39,6 +39,8 @@ In this module, the student will be able to:
     - [Task 3: Create and update statistics](#task-3-create-and-update-statistics)
     - [Task 4: Create and update indexes](#task-4-create-and-update-indexes)
     - [Task 5: Ordered Clustered Columnstore Indexes](#task-5-ordered-clustered-columnstore-indexes)
+  - [Exercise 5: Cleanup](#exercise-5-cleanup)
+    - [Task 1: Pause the dedicated SQL pool](#task-1-pause-the-dedicated-sql-pool)
 
 ## Lab setup and pre-requisites
 
@@ -172,7 +174,7 @@ Before you begin, we need to create a few new tables and load them with data.
     GO
 
     COPY INTO Category 
-    FROM 'https://solliancepublicdata.blob.core.windows.net/cdp/csv/Category.csv'
+    FROM 'https://solliancepublicdata.blob.core.windows.net/dataengineering/dp-203/books/Category.csv'
     WITH (
         FILE_TYPE = 'CSV',
         FIRSTROW = 2
@@ -180,7 +182,7 @@ Before you begin, we need to create a few new tables and load them with data.
     GO
 
     COPY INTO Books 
-    FROM 'https://solliancepublicdata.blob.core.windows.net/cdp/csv/Books.csv'
+    FROM 'https://solliancepublicdata.blob.core.windows.net/dataengineering/dp-203/books/Books.csv'
     WITH (
         FILE_TYPE = 'CSV',
         FIRSTROW = 2
@@ -188,7 +190,7 @@ Before you begin, we need to create a few new tables and load them with data.
     GO
 
     COPY INTO BookConsumption 
-    FROM 'https://solliancepublicdata.blob.core.windows.net/cdp/csv/BookConsumption.csv'
+    FROM 'https://solliancepublicdata.blob.core.windows.net/dataengineering/dp-203/books/BookConsumption.csv'
     WITH (
         FILE_TYPE = 'CSV',
         FIRSTROW = 2
@@ -196,7 +198,7 @@ Before you begin, we need to create a few new tables and load them with data.
     GO
 
     COPY INTO BookList 
-    FROM 'https://solliancepublicdata.blob.core.windows.net/cdp/csv/BookList.csv'
+    FROM 'https://solliancepublicdata.blob.core.windows.net/dataengineering/dp-203/books/BookList.csv'
     WITH (
         FILE_TYPE = 'CSV',
         FIRSTROW = 2
@@ -385,7 +387,7 @@ To achieve this, you use ROWS in combination with UNBOUNDED PRECEDING to limit t
 
     In this query, we use the `FIRST_VALUE` analytic function to retrieve the book title with the fewest downloads, as indicated by the **`ROWS UNBOUNDED PRECEDING`** clause over the `Country` partition **(1)**. The `UNBOUNDED PRECEDING` option set the window start to the first row of the partition, giving us the title of the book with the fewest downloads for the country within the partition.
 
-    In the result set, we can scroll through the list that of books by country, sorted by number of downloads in ascending order. Here we see that for Germany, `Harry Potter - The Ultimate Quiz Book` (not to be confused with `Harry Potter - The Ultimate Quiz`, which had the most) had the fewest downloads, and `Burn for Me` had the fewest in Sweden **(2)**.
+    In the result set, we can scroll through the list that of books by country, sorted by number of downloads in ascending order. Here we see that for Germany, `Fallen Kitten of the Sword - The Ultimate Quiz` had the most downloads, and `Notebooks for Burning` had the fewest in Sweden **(2)**.
 
 ### Task 3: Approximate execution using HyperLogLog functions
 
@@ -894,7 +896,7 @@ Let's start by experimenting with different parameters.
     ---|---|---
     1 | RND_ID | Identifies an object that will be created. In our case, it's the `TEMP_ID_76` internal table.
     2 | ON | Specifies the location (nodes or distributions) where the operation will occur. `AllDistributions` means here the operation will be performed on each of the 60 distributions of the SQL pool. The operation will be a SQL operation (specified via `<sql_operations>`) that will create the  `TEMP_ID_76` table.
-    3 | SHUFFLE_MOVE | The list of shuffle columns contains only one column which is `CustomerId` (specified via `<suffle_columns>`). The values will be distributed to the hash owning distributions and saved locally in the `TEMP_ID_76` tables. The operation will output an estimated number of 41265.25 rows (specified via `<operation_cost>`). According to the same section, the average resulting row size is 13 bytes.
+    3 | SHUFFLE_MOVE | The list of shuffle columns contains only one column which is `CustomerId` (specified via `<shuffle_columns>`). The values will be distributed to the hash owning distributions and saved locally in the `TEMP_ID_76` tables. The operation will output an estimated number of 41265.25 rows (specified via `<operation_cost>`). According to the same section, the average resulting row size is 13 bytes.
     4 | RETURN | Data resulting from the shuffle operation will be collected from all distributions (see `<location>`) by querying the internal temporary table `TEMP_ID_76`.
     5 | ON | The `TEMP_ID_76` will be deleted from all distributions.
 
@@ -1981,3 +1983,23 @@ Queries with the following patterns typically run faster with ordered CCI:
     The results show significantly less overlap between segments:
 
     ![CCI segment structure on each distribution with ordered CCI](./media/lab3_ordered_cci_2.png)
+
+## Exercise 5: Cleanup
+
+Complete these steps to free up resources you no longer need.
+
+### Task 1: Pause the dedicated SQL pool
+
+1. Open Synapse Studio (<https://web.azuresynapse.net/>).
+
+2. Select the **Manage** hub.
+
+    ![The manage hub is highlighted.](media/manage-hub.png "Manage hub")
+
+3. Select **SQL pools** in the left-hand menu **(1)**. Hover over the name of the dedicated SQL pool and select **Pause (2)**.
+
+    ![The pause button is highlighted on the dedicated SQL pool.](media/pause-dedicated-sql-pool.png "Pause")
+
+4. When prompted, select **Pause**.
+
+    ![The pause button is highlighted.](media/pause-dedicated-sql-pool-confirm.png "Pause")
