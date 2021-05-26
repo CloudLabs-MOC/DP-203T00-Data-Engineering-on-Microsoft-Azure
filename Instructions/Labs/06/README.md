@@ -39,6 +39,9 @@ Your data processing in Azure Databricks is accomplished by defining DataFrames 
 
 1. If you do not currently have your Azure Databricks workspace open: in the Azure portal, navigate to your deployed Azure Databricks workspace and select **Launch Workspace**.
 1. In the left pane, select **Workspace** > **Users**, and select your username (the entry with the house icon).
+
+  ![The menu option to lanch workspace](media/Workspace-launch.png)
+  
 1. In the pane that appears, select the arrow next to your name, and select **Import**.
 
     ![The menu option to import the archive](media/import-archive.png)
