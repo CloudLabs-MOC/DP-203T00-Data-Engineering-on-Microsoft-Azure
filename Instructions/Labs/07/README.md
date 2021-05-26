@@ -12,7 +12,6 @@ In this module, the student will be able to:
 
 - [Module 7 - Ingest and load data into the Data Warehouse](#module-7---ingest-and-load-data-into-the-data-warehouse)
   - [Lab details](#lab-details)
-  - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Import data with PolyBase and COPY using T-SQL](#exercise-1-import-data-with-polybase-and-copy-using-t-sql)
     - [Task 1: Create staging tables](#task-1-create-staging-tables)
