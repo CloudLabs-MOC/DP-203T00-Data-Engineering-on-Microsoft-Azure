@@ -11,6 +11,7 @@ In this module, the student will be able to:
 ## Lab details
 
 - [Module 8 - Transform data with Azure Data Factory or Azure Synapse Pipelines](#module-8---transform-data-with-azure-data-factory-or-azure-synapse-pipelines)
+  - [Lab details](#lab-details)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Lab 1: Code-free transformation at scale with Azure Synapse Pipelines](#lab-1-code-free-transformation-at-scale-with-azure-synapse-pipelines)
     - [Exercise 1: Create artifacts](#exercise-1-create-artifacts)
