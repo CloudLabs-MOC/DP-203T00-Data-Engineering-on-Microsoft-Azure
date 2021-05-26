@@ -61,13 +61,6 @@ Contoso Auto is collecting vehicle telemetry and wants to use Event Hubs to rapi
 
 In this experience, you will use Azure Event Hubs to ingest streaming vehicle telemetry data as the entry point to a near real-time analytics pipeline built on Event Hubs, Azure Stream Analytics, and Power BI. Azure Stream Analytics extracts the vehicle sensor data from Event Hubs, performs aggregations over windows of time, then sends the aggregated data to Azure Synapse Analytics and Power BI for data visualization and analysis. A vehicle telemetry data generator will be used to send vehicle telemetry data to Event Hubs.
 
-## Lab setup and pre-requisites
-
-> **Note:** Only complete the `Lab setup and pre-requisites` steps if you are **not** using a hosted lab environment, and are instead using your own Azure subscription. Otherwise, skip ahead to Exercise 0.
-
-- Azure subscription
-- Power BI account (sign up at <https://powerbi.microsoft.com>)
-- [Lab environment setup](https://github.com/solliancenet/microsoft-data-engineering-ilt-deploy/tree/main/setup/14)
 
 ## Exercise 0: Start the dedicated SQL pool
 
