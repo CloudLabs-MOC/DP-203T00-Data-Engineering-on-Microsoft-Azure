@@ -13,7 +13,6 @@ In this module, the student will be able to:
 
 - [Module 5 - Explore, transform, and load data into the Data Warehouse using Apache Spark](#module-5---explore-transform-and-load-data-into-the-data-warehouse-using-apache-spark)
   - [Lab details](#lab-details)
-  - [Lab setup and pre-requisites](#lab-setup-and-pre-requisites)
   - [Exercise 0: Start the dedicated SQL pool](#exercise-0-start-the-dedicated-sql-pool)
   - [Exercise 1: Perform Data Exploration in Synapse Studio](#exercise-1-perform-data-exploration-in-synapse-studio)
     - [Task 1: Exploring data using the data previewer in Azure Synapse Studio](#task-1-exploring-data-using-the-data-previewer-in-azure-synapse-studio)
