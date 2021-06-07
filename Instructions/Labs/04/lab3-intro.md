@@ -19,14 +19,14 @@
 
   In this hands-on lab you will be performing the below modules:
 
-- [Module 4](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/01)  
-- [Module 5](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/05)
-- [Module 7](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/07)
-- [Module 8](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/08)
-- [Module 9](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/09)
-- [Module 10](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/10)
-- [Module 11](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/11)
-- [Module 12](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/12)
-- [Module 13](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/13)
-- [Module 16](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/16)
+- **Module 4 - Run interactive queries using serverless SQL pools**  
+- **Module 5 - Explore, transform, and load data into the Data Warehouse using Apache Spark**
+- **Module 7 - Ingest and load data into the Data Warehouse**
+- **Module 8 - Transform data with Azure Data Factory or Azure Synapse Pipelines**
+- **Module 9 - Integrate data from notebooks with Azure Data Factory or Azure Synapse Pipelines**
+- **Module 10 - Optimize query performance with dedicated SQL pools in Azure Synapse**
+- **Module 11 - Analyze and optimize Data Warehouse storage**
+- **Module 12 - Support Hybrid Transactional Analytical Processing (HTAP) with Azure Synapse Link**
+- **Module 13 - End-to-end security with Azure Synapse Analytics**
+- **Module 16 - Build reports using Power BI integration with Azure Synapse Analytics**
  
