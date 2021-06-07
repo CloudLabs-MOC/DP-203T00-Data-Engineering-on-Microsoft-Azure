@@ -25,7 +25,7 @@
 
 In this hands-on lab you will perform the following module:
 
- - [Module 17](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/17)  
+ - **Module 17 - Perform integrated Machine Learning processes in Azure Synapse Analytics**  
 
 
 
