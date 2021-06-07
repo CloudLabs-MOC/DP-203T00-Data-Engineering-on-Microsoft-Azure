@@ -25,4 +25,4 @@
 
 In this hands-on lab you will be performing the following module:
 
- - [Module 14](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/14)  
+ - **Module 14 - Real-time stream processing with Stream Analytics**  
