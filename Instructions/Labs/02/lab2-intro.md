@@ -25,7 +25,7 @@
 
 In this hands-on lab you will perform the following module:
 
- - [Module 2](https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure/tree/master/Instructions/Labs/02)  
+ - **Module 2 - Design and Implement the serving layer** 
 
 
 
