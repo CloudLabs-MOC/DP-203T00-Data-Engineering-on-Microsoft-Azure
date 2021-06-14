@@ -20,6 +20,27 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
+
+   ***Please follow the below steps to login to Databricks Workspace:***
+
+   Step 1: Launch Workspace
+
+     ![](https://github.com/CloudLabs-MOC/microsoft-data-engineering-ilt-deploy/raw/main/setup/01/media/Databricks%201.png)
+     
+   Step 2: Click on "Skip for now (14 days until this is required)"
+
+   Step 3: Click on "Sign in with Azure AD"
+
+     ![](https://github.com/CloudLabs-MOC/microsoft-data-engineering-ilt-deploy/raw/main/setup/01/media/Databricks%202.png)
+
+   Step 4: Click on "Previous page" button on your browser two times until you are back on Databricks login page.
+
+     ![](https://github.com/CloudLabs-MOC/microsoft-data-engineering-ilt-deploy/raw/main/setup/01/media/Databricks%203.png)
+     
+   Step 5: Now click on "Sign in with Azure AD"
+
+     ![](https://github.com/CloudLabs-MOC/microsoft-data-engineering-ilt-deploy/raw/main/setup/01/media/Databricks%204.png)
+
 1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ### Modules Included
