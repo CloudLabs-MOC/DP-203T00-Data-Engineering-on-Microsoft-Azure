@@ -15,6 +15,8 @@
 
 5. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
+**NOTE:** The notebook **Lab 2 - Explore with Spark.ipynb** required in **Exercise 1 Task 3, Step 2 of Module 5** is already downloaded in the C:\LabFiles folder of the provided lab VM.Please use the same notebook for the lab steps.
+
 ## Modules Included
 
   In this hands-on lab you will be performing the below modules:
