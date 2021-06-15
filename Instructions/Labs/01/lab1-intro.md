@@ -20,19 +20,25 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-
-   ***Please follow the below steps to login to Databricks Workspace:***
+   ***Please be informed that there is some temporary issue from Databricks, Please follow the below steps:***
 
    Step 1: Launch Workspace
+    ![](media/databricks-01.png "Launch workspace") 
      
    Step 2: Click on "Skip for now (14 days until this is required)"
 
    Step 3: Click on "Sign in with Azure AD"
 
+     ![](media/databricks-02.png "Sign in") 
+     
    Step 4: Click on "Previous page" button on your browser two times until you are back on Databricks login page.
+
+     ![](media/databricks-03.png "Previous page") 
      
    Step 5: Now click on "Sign in with Azure AD"
 
+     ![](media/databricks-04.png "Sign in Azure AD") 
+     
 1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ### Modules Included
