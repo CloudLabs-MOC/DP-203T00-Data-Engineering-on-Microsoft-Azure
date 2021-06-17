@@ -72,10 +72,6 @@
 
 1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
-**Note:** Ensure to stop the virtual machine once you are done using a particular lab environment. You can stop the VM using the lab environment page. Please navigate to the Virtual Machines page and click the Stop icon.
-
-   ![](media/vmstop.png "VMstop")
-
 ### Modules Included
 
    In this hands on lab you will perform the following modules:
@@ -83,3 +79,8 @@
  - **Module 1 - Explore compute and storage options for data engineering workloads** 
  - **Module 6 - Data exploration and transformation in Azure Databricks**
  - **Module 15 - Create a stream processing solution with Event Hubs and Azure Databricks**
+
+ **Note:** Ensure to stop the virtual machine once you are done using a particular lab environment. You can stop the VM using the lab environment page. Please navigate to the Virtual Machines tab and click the Stop icon.
+
+   ![](media/vmstop.png "VMstop")
+
