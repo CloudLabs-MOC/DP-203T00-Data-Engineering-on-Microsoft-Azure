@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "DP 203 : Data Engineering on Azure - Getting Started",
+    "Language": "English",
+    "BaseURL": "https://github.com/MicrosoftLearning/DP-203T00-Data-Engineering-on-Microsoft-Azure",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-203T00-Data-Engineering-on-Microsoft-Azure/intro/Instructions/Labs/Gettingstarted.md",
+        "Order": 1
+      }
+    ]
+  }
+]
