@@ -45,6 +45,7 @@
    - SQL Database
    - Dedicated SQL pool
  
+   
    **Tools included:** *Azure data studio* which is required to perform the lab is already installed in the VM.
  
  1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
