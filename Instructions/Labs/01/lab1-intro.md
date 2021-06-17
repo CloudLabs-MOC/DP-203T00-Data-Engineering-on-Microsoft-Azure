@@ -20,7 +20,7 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-1. Navigate to the **DP203-M1-<inject key="DeploymentID" />** Resource group and verify whether you have all the below resources deployed successfully.
+1. Navigate to the **DP203-M1-<inject key="DeploymentID"></inject>** Resource group and verify whether you have all the below resources deployed successfully.
   
     ![lab1 rg](media/lab1rg.png "lab1 resource group") 
 
