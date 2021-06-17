@@ -1,6 +1,6 @@
 ## **Getting Started**
 
-### Log-in to the Azure portal
+### Log-in to the Azure portal and verify the pre-deployed resources
 
 1. In the LabVM, double click on the Azure portal shortcut on the desktop.
 
@@ -20,25 +20,44 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
+1. Navigate to the **DP203-M1-<inject key="DeploymentID" enableCopy="false"/>** Resource group and verify whether you have all the below resources deployed successfully.
+  
+    ![lab1 rg](media/lab1rg.png "lab1 resource group") 
+
+   - Azure Databricks 
+   - Storage account
+   - Key vault
+   - Event hub namespace
+   - Synapse workspace
+   - Apache Spark pool
+
    ***Please be informed that there is some temporary issue from Databricks, Please follow the below steps:***
 
    Step 1: Launch Workspace
-    ![](media/databricks-01.png "Launch workspace") 
+   ![](media/databricks-01.png "Launch workspace") 
      
    Step 2: Click on "Skip for now (14 days until this is required)"
 
    Step 3: Click on "Sign in with Azure AD"
 
-     ![](media/databricks-02.png "Sign in") 
+   ![](media/databricks-02.png "Sign in") 
      
    Step 4: Click on "Previous page" button on your browser two times until you are back on Databricks login page.
 
-     ![](media/databricks-03.png "Previous page") 
+   ![](media/databricks-03.png "Previous page") 
      
-   Step 5: Now click on "Sign in with Azure AD"
+   Step 5: Now click on "Sign in with Azure AD" and click on "skip for now"
 
-     ![](media/databricks-04.png "Sign in Azure AD") 
-     
+   ![](media/databricks-04.png "Sign in Azure AD")
+   
+   Step 6: Verify if databricks cluster is pre-deployed.
+   
+   ![](media/clusterverify.png "Veirfy cluster")
+   
+   Step 7: If the cluster is in **Terminated** state, select the cluster and click on **start** and confirm.
+   
+   ![](media/startcluster.png "Start cluster")
+
 1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ### Modules Included
