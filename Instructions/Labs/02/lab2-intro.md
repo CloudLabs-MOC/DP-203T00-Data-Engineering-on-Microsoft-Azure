@@ -8,6 +8,8 @@
 
    ![LabEnvironment](media/environmenttab-lab2.png)
 
+1. Note the sqladmin password(sqlAdministratorLoginPassword) value from the Environment Details tab in a notepad and please use it in the lab steps *Exercise 1 task 1 step 6 and Exercise 5 Task 1 step 4*.
+
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
 1. In the LabVM, double click on the **Azure portal** shortcut on the desktop.
