@@ -70,8 +70,6 @@
    
    ![](media/startcluster.png "Start cluster")
 
-1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
-
 ### Modules Included
 
    In this hands on lab you will perform the following modules:
@@ -83,4 +81,5 @@
  **Note:** Ensure to stop the virtual machine once you are done using a particular lab environment. You can stop the VM using the lab environment page. Please navigate to the Virtual Machines tab and click the Stop icon.
 
    ![](media/vmstop.png "VMstop")
-
+  
+   Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
