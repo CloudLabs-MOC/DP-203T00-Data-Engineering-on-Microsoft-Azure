@@ -52,7 +52,7 @@
 
    ![pause sqlpool](media/sqlpause.png "pause sqlpool") 
 
-1. Please ensure to **stop** the virtual machine from the Virtual Machines tab of the lab environment as shown whenever the environment is not in use.
+1. Please ensure to **stop** the virtual machine from the Virtual Machines tab whenever the environment is not in use.
 
    ![stop vm rg](media/vmstop.png "stop vm") 
 
