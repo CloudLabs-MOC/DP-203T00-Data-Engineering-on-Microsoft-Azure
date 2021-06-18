@@ -42,8 +42,6 @@
    - Dedicated SQL Pool
    - Event hub namespace
    
-1. **Tools included:** *PowerBI Desktop* which is required in Module 16 is already installed in the VM.
-
 1.  Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ## **Modules Included**
