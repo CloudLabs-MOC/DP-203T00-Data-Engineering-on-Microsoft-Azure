@@ -2,11 +2,11 @@
 
 1. Once the environment is provisioned, a virtual machine and lab guide will get loaded into your browser. Use this virtual machine throughout the workshop to perform the lab.
    
-   ![LabEnvironment](media/vmandguide-lab4.png)
+   ![LabEnvironment](media/vmandguide-lab5.png)
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
-   ![LabEnvironment](media/environmenttab-lab6.png)
+   ![LabEnvironment](media/environmenttab-lab5.png)
 
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
