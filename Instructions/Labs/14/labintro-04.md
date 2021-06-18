@@ -39,6 +39,7 @@
    - Stream Analytics job
    - Storage account
    - Synapse workspace
+   - Dedicated SQL Pool
    - Event hub namespace
    
 1. **Tools included:** *PowerBI Desktop* which is required in Module 16 is already installed in the VM.
