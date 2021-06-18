@@ -48,6 +48,8 @@
    
 1. **Tools included:** *PowerBI Desktop* which is required is already installed in the VM.
 
+**Note:** The file **ProductQuantityForecast.pbix** is downloaded in the **C:\LabFiles** folder of the VM. Please ensure to use this file in the step **Exercise 4 Task 1**.
+
 1.  Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ## **Modules Included**
