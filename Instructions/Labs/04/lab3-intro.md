@@ -2,7 +2,7 @@
 
 1. Once the environment is provisioned, a virtual machine and lab guide will get loaded into your browser. Use this virtual machine throughout the workshop to perform the lab.
    
-   ![LabEnvironment](media/vmandguide-lab2.png)
+   ![LabEnvironment](media/vmandguide-lab3.png)
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
@@ -32,23 +32,31 @@
    
    ![lab1 rg](media/rg.png "lab1 resource group") 
      
-1. Navigate to the **DP203-M2-<inject key="DeploymentID"></inject>** Resource group and verify whether you have all the below resources deployed successfully.
+1. Navigate to the **DP203** Resource group and verify whether you have all the below resources deployed successfully.
   
     ![lab1 rg](media/rg-lab3.png "lab3 resource group") 
 
-   - Storage account
+   - Application insights
+   - Azure Cosmos DB account
+   - Two Storage accounts
    - Key vault
    - Synapse workspace
-   - SQL server
-   - SQL Database
+   - Apache spark pool
    - Dedicated SQL pool
  
-   
-**Tools included:** *PowerBI Desktop* which is required in Module 16 is already installed in the VM.
+1. **Tools included:** *PowerBI Desktop* which is required in Module 16 is already installed in the VM.
 
-**NOTE:** The notebook **Lab 2 - Explore with Spark.ipynb** required in **Exercise 1 Task 3, Step 2 of Module 5** is already downloaded in the C:\LabFiles folder of the provided lab VM.Please use the same notebook for the lab steps.
+    **NOTE:** The notebook **Lab 2 - Explore with Spark.ipynb** required in **Exercise 1 Task 3, Step 2 of Module 5** is already downloaded in the C:\LabFiles folder of the provided lab VM.Please use the same notebook for the lab steps.
  
- 1. Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
+1. Please ensure to **pause** the SQLPool whenever the environment is not in use.
+
+   ![pause sqlpool](media/sqlpause.png "pause sqlpool") 
+
+1. Please ensure to **stop** the virtual machine from the Virtual Machines tab of the lab environment as shown whenever the environment is not in use.
+
+   ![stop vm rg](media/vmstop.png "stop vm") 
+
+1.  Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
 ## Modules Included
 
