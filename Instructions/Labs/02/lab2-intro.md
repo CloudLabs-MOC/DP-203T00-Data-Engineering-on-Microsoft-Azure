@@ -6,7 +6,7 @@
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
-   ![LabEnvironment](media/environmenttab-lab2.png)
+   ![LabEnvironment](media/envdetails-env2.png)
 
 1. Note the *sqlAdministratorLoginPassword* value from the Environment Details tab in a notepad and please use it in the lab steps **Exercise 1 task 1 step 6** and **Exercise 5 Task 1 step 4** to provide the sqladmin password.
 
