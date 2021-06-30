@@ -6,7 +6,11 @@
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
-   ![LabEnvironment](media/environmenttab.png)
+   ![LabEnvironment](media/envtab-env1.png)
+
+1. To check if you have performed the lab step steps correctly, click on **Validate** after each exercise from the Lab Validation tab of the environment page.
+
+   ![](media/ validation-env1.png "Validation")
 
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
@@ -78,8 +82,8 @@
  - **Module 6 - Data exploration and transformation in Azure Databricks**
  - **Module 15 - Create a stream processing solution with Event Hubs and Azure Databricks**
 
- **Note:** Ensure to stop the virtual machine once you are done using a particular lab environment. You can stop the VM using the lab environment page. Please navigate to the Virtual Machines tab and click the Stop icon.
+ **Note:** Ensure to stop the virtual machine once you are done using a particular lab environment. You can stop the VM using the lab environment page. Please navigate to the **Resources** tab and click the Stop icon.
 
-   ![](media/vmstop.png "VMstop")
-  
-   Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
+   ![](media/resourcestab-env1.png "VMstop")
+   
+ Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
