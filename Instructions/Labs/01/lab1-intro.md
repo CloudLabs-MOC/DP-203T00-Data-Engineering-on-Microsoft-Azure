@@ -10,7 +10,7 @@
 
 1. To check if you have performed the lab step steps correctly, click on **Validate** after each exercise from the Lab Validation tab of the environment page.
 
-   ![](media/ validation-env1.png "Validation")
+   ![](media/validation-env1.png "Validation")
 
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
