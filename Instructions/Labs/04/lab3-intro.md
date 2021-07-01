@@ -2,11 +2,11 @@
 
 1. Once the environment is provisioned, a virtual machine and lab guide will get loaded into your browser. Use this virtual machine throughout the workshop to perform the lab.
    
-   ![LabEnvironment](media/vmandguide-lab3.png)
+   ![LabEnvironment](media/vmandguide-env3.png)
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
-   ![LabEnvironment](media/environmenttab-lab3.png)
+   ![LabEnvironment](media/envdetails-env3.png)
 
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
@@ -52,9 +52,9 @@
 
    ![pause sqlpool](media/sqlpause.png "pause sqlpool") 
 
-1. Please ensure to **stop** the virtual machine from the Virtual Machines tab whenever the environment is not in use.
+1. Please ensure to **stop** the virtual machine from the **Resources** tab whenever the environment is not in use.
 
-   ![stop vm rg](media/vmstop.png "stop vm") 
+   ![stop vm rg](media/resourcestab-env3.png "stop vm") 
 
 1.  Click on **Next** from the bottom right corner and follow the instructions to perform the lab.
 
