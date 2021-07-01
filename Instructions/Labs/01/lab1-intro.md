@@ -8,7 +8,7 @@
 
    ![LabEnvironment](media/envtab-env1.png)
 
-1. To check if you have performed the lab step steps correctly, click on **Validate** after each exercise from the Lab Validation tab of the environment page.
+1. To check if you have performed the lab step steps correctly, click on **Validate** after each module from the Lab Validation tab of the environment page.
 
    ![](media/validation-env1.png "Validation")
 
