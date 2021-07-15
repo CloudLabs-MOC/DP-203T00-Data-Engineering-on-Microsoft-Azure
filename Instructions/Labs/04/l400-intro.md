@@ -7,8 +7,6 @@
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
 1. In the LabVM, double click on the **Azure portal** shortcut on the desktop.
-
-     ![LabEnvironment](media/azureshortcut.png) 
      
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**.  
    * **Azure Username/Email**:  <inject key="AzureAdUserEmail"></inject>
