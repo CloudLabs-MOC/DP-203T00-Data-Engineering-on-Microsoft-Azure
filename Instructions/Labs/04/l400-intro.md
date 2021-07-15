@@ -4,8 +4,6 @@
    
 1. To get the lab environment details, you can select the Environment Details tab. Additionally, the credentials will also be sent to your email address provided during registration.
 
-   ![LabEnvironment](media/envdetails-env3.png)
-
 ### Log-in to the Azure portal and verify the pre-deployed resources
 
 1. In the LabVM, double click on the **Azure portal** shortcut on the desktop.
