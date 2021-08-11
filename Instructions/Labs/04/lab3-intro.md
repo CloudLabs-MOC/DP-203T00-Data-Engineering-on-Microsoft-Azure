@@ -47,6 +47,8 @@
 1. **Tools included:** *PowerBI Desktop* which is required in Module 16 is already installed in the VM.
 
     **NOTE:** The notebook **Lab 2 - Explore with Spark.ipynb** required in **Exercise 1 Task 3, Step 2 of Module 5** is already downloaded in the C:\LabFiles folder of the provided lab VM.Please use the same notebook for the lab steps.
+    
+    The file **sale-small-20100102-snappy.parquet** required for **Module 7 exercise 2 task 2 step 9** is downloaded in LabFiles folder on the desktop in the labvm provided.
  
 1. Please ensure to **pause** the SQLPool whenever the environment is not in use.
 
